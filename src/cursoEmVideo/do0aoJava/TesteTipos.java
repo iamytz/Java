@@ -1,4 +1,4 @@
-package cursoEmVideo.pooJava;
+package cursoEmVideo.do0aoJava;
 
 public class TesteTipos {
     public static void main(String[] args) {

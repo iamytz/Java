@@ -1,4 +1,4 @@
-package cursoEmVideo.pooJava;
+package cursoEmVideo.do0aoJava;
 
 import java.util.Scanner;
 
