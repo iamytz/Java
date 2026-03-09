@@ -8,6 +8,7 @@ public class Aula02 {
         c1.tampada = false;
 
         c1.status();
+        
 
     }
 }
