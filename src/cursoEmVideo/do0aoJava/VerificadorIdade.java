@@ -33,7 +33,7 @@ public class VerificadorIdade {
                 System.out.print("Voto Obrigatorio");
                 break;
             case 4:
-                System.out.print("Voto não obrigatorio");
+                System.out.print("Voto não obrigatorio");   
         }
 
 
