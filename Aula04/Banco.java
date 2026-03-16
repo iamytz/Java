@@ -8,7 +8,7 @@ public class Banco {
     float saldo;
     boolean status;
 
-    // DEFININDO METODO CONSTRUTOR
+    // DEFININDO METODO CONSTRUTOR  --Construct Method
     public Banco(int numConta, String tipo, String nomeDono){
         setNumConta(numConta);
         setTipo(tipo);
@@ -41,9 +41,19 @@ public class Banco {
         }
         }
 
-        //Arrumar para nao permitir valores negativos e verificar status da conta true
     public String depositar(float valor) {
+        if (valor <0) {
+            System.out.printf("Tentaiva de Deposito de %.2f\n",valor);
+            System.out.println("O valor de deposito nao pode ser menor que zero.");
+            return "O valor nao pode ser menor que zero.";
+        }
+        if (!getStatus()) {
+
+            System.out.println("A conta deve estar aberta.");
+            return "A conta deve estar aberta";
+        }
         float valorAdepositar = valor + getSaldo();
+        System.out.printf("Deposito de %.2f realizado com sucesso.\n",valor);
         setSaldo(valorAdepositar);
         return "Valor depositado com sucesso!";
     }

@@ -8,9 +8,11 @@ public static void main(String[] args) {
     Banco user2 = new Banco(2, "CX", "Creusa");
 
     user1.abrirConta();
-    user2.abrirConta();
     user1.depositar(10);
     System.out.println(user1.show());
+
+    user2.abrirConta();
+
     System.out.println(user2.show());
 
 
