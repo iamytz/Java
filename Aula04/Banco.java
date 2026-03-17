@@ -57,6 +57,63 @@ public class Banco {
         setSaldo(valorAdepositar);
         return "Valor depositado com sucesso!";
     }
+    public String sacar(float valor) {
+        if (getSaldo() < valor) {
+            System.out.printf("Saldo Insfuciente Para Sacar %.2f!\n",valor);
+            return "Sem Saldo";
+        }
+        if (!getStatus()) {
+            System.out.println("A conta deve estar aberta");
+            return "Conta Fechada";
+        }
+        System.out.printf("Saque de %.2f Realizado com Sucesso!z\n",valor);
+        setSaldo(getSaldo()-valor);
+        return "Saque Realizado";
+    }
+
+    public void pagarMensalidade() {
+        if (!getStatus()) {
+            System.out.println("A conta preicsar estar aberta");
+            return;
+        }
+        switch (getTipo()) {
+            case "CC":
+                if (getSaldo() < 12) {
+                    System.out.println("Saldo Insuficiente Para pagar mensalidade de R$12");
+                    break;
+                } else {
+                    setSaldo(getSaldo()-12);
+                    System.out.println("Mensalidade de R$12 Paga Com Sucesso. ");
+                    break;
+                }
+
+            case "CP":
+                if (getSaldo() <20) {
+                    System.out.println("Saldo Insuficiente Para pagar mensalidade de R$20");
+                    break;
+                } else {
+                    setSaldo(getSaldo()-20);
+                    System.out.println("Mensalidade de R$20 Paga Com Sucesso.");
+                    break;
+                }
+
+        }
+    }
+
+        public void fecharConta() {
+        if (!getStatus()) {
+            System.out.println("A conta precisa esta aberta para ser fechada!");
+            }
+        if (getSaldo()>0) {
+            System.out.println("É Preciso sacar todo dinheiro antes de encerrar a conta!");
+        }
+        if (getSaldo()<0) {
+            System.out.println("Voce nao pode fechar a conta com debitos ausentes!!!");
+            }
+        setSaldo(0);
+        setStatus(false);
+        }
+
 
     //CRIANDO GETTERS E SETTERS
     

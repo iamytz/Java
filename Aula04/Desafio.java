@@ -9,10 +9,16 @@ public static void main(String[] args) {
 
     user1.abrirConta();
     user1.depositar(10);
+    user1.pagarMensalidade();
     System.out.println(user1.show());
 
-    user2.abrirConta();
+    //SEMPRE SEPARAR OS OBJETOS (PESSOAS)
 
+    user2.abrirConta();
+    user2.sacar(50);
+    user2.pagarMensalidade();
+    System.out.println(user2.show());
+    user2.fecharConta();
     System.out.println(user2.show());
 
 
