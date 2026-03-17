@@ -2,11 +2,11 @@ package Aula04;
 
 public class Banco {
     // DEFININDO ATRIBUTOS
-    int numConta;
-    String tipo;
-    String nomeDono;
-    float saldo;
-    boolean status;
+    public int numConta;
+    protected String tipo;
+    private String nomeDono;
+    private float saldo;
+    private boolean status;
 
     // DEFININDO METODO CONSTRUTOR  --Construct Method
     public Banco(int numConta, String tipo, String nomeDono){
