@@ -18,6 +18,7 @@ public class Lutador {
         this.setNacionalidade(nacionalidade);
         this.setIdade(idade);
         this.setAltura(altura);
+        this.setPeso(peso);
         this.setCategoria(peso);
         this.setVitorias(vitorias);
         this.setDerrotas(derrotas);
@@ -27,6 +28,22 @@ public class Lutador {
 
     //  DENINDO METODOS
 
+    //apresentar lutador
+    //ganhar
+    //perder
+    //empatar
+
+
+    public void apresentarLutador() {
+        System.out.print("=".repeat(20));
+        System.out.print(" ULTRA EMOJI COMBAT ");
+        System.out.print("=".repeat(20));
+        System.out.printf("\nNome: %s\n",this.getNome());
+        System.out.printf("Nacionalidade: %s\n",this.getNacionalidade());
+        System.out.printf("Idade: %d\n",this.getIdade());
+        System.out.printf("Altura %.2fm\n",this.getAltura());
+        System.out.printf("Peso: %.2fkg\n",this.getPeso());
+    }
 
 
 
@@ -105,7 +122,7 @@ public class Lutador {
     }
 
     private float getPeso() {
-        return peso;
+        return this.peso;
     }
 
     private void setPeso(float peso) {
