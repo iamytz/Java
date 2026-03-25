@@ -11,3 +11,8 @@
 out/
 
 out/*.class
+out/
+./out/
+.idea/
+./idea/
+repositorios.iml
