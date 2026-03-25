@@ -33,7 +33,6 @@ public class Lutador {
     //perder
     //empatar
 
-
     public void apresentarLutador() {
         System.out.print("=".repeat(20));
         System.out.print(" ULTRA EMOJI COMBAT ");
@@ -43,10 +42,20 @@ public class Lutador {
         System.out.printf("Idade: %d\n",this.getIdade());
         System.out.printf("Altura %.2fm\n",this.getAltura());
         System.out.printf("Peso: %.2fkg\n",this.getPeso());
+        System.out.printf("Categoria: %c\n",this.getCategoria());
     }
 
+    public void ganhar() {
+        this.setVitorias(getVitorias()+1);
+    }
 
+    public void perder() {
+        this.setDerrotas(getDerrotas()+1);
+    }
 
+    public void empatar() {
+        this.setEmpates(getEmpates()+1);
+    }
 
 
 
@@ -59,7 +68,7 @@ public class Lutador {
         this.empates = empates;
     }
 
-    private char getCategoria() {
+    public char getCategoria() {
         return categoria;
     }
 
